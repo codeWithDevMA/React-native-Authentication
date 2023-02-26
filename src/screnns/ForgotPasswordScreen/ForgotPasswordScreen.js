@@ -3,19 +3,19 @@ import React, {useState} from 'react';
 
 import {CustomInput} from '../../components/custominput/index.js';
 import {CustomButton} from '../../components/custombutton/index.js';
+import Navigation from '../../navigation/index.js';
 
 const ForgotPasswordScreen = () => {
   const [username, setusername] = useState('');
 
   const onResetPressed = () => {
     console.warn('Registred');
+    Navigation.navigate('Signin');
   };
 
-  const onSendPressed = () => {
-    console.warn('on Send Pressed ');
-  };
   const onSignInPressed = () => {
     console.warn('on Sign In pressed');
+    Navigation.navigate('Signin');
   };
 
   return (

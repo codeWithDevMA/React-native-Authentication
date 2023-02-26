@@ -11,19 +11,24 @@ import Logo from '../../../assets/images/logo.png';
 import {CustomInput} from '../../components/custominput/index.js';
 import {CustomButton} from '../../components/custombutton/index.js';
 import {SocialSignInButton} from '../../components/socialSignInButton';
+import {useNavigation} from '@react-navigation/native';
 const SigninScreen = () => {
+  const navigation = useNavigation();
   const height = useWindowDimensions();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const onSignInPressed = () => {
     console.warn('sign in');
+    navigation.navigate('Home');
   };
   const onForgotPressed = () => {
     console.warn('Forgot password pressed');
+    navigation.navigate('ForgotPassword');
   };
 
   const onSignUpPressed = () => {
     console.warn('Create an Account ');
+    navigation.navigate('SignUp');
   };
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
@@ -45,7 +50,7 @@ const SigninScreen = () => {
           setvalue={setPassword}
           secureTextEntry={true}
         />
-        <CustomButton onPress={onSignInPressed} text={'Button'} />
+        <CustomButton onPress={onSignInPressed} text={'SignIn'} />
         <CustomButton
           onPress={onForgotPressed}
           text={"Forgot you're password ?"}

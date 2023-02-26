@@ -3,12 +3,14 @@ import React, {useState} from 'react';
 
 import {CustomInput} from '../../components/custominput/index.js';
 import {CustomButton} from '../../components/custombutton/index.js';
+import Navigation from '../../navigation/index.js';
 
 const ConfirmEmailScreen = () => {
   const [code, setcode] = useState('');
 
   const onConfirmPressed = () => {
     console.warn('Registred');
+    Navigation.navigate('Home');
   };
 
   const onResendPressed = () => {
@@ -16,6 +18,7 @@ const ConfirmEmailScreen = () => {
   };
   const onSignInPressed = () => {
     console.warn('on Sign In pressed');
+    Navigation.navigate('Signin');
   };
 
   return (

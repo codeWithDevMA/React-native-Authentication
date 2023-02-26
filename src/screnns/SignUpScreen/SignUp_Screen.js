@@ -4,6 +4,7 @@ import React, {useState} from 'react';
 import {CustomInput} from '../../components/custominput/index.js';
 import {CustomButton} from '../../components/custombutton/index.js';
 import {SocialSignInButton} from '../../components/socialSignInButton/index';
+import Navigation from '../../navigation/index.js';
 
 const SignUpScreen = () => {
   const [username, setUsername] = useState('');
@@ -12,6 +13,7 @@ const SignUpScreen = () => {
   const [Email, setEmail] = useState('');
   const onRegisterPressed = () => {
     console.warn('Registred');
+    Navigation.navigate('ConfirmEmail');
   };
   const onTermsofUSe = () => {
     console.warn('on terms of use pressed');
@@ -20,7 +22,8 @@ const SignUpScreen = () => {
     console.warn('on privicy policy pressed');
   };
   const onSignInPressed = () => {
-    console.warn('on Sign In pressed');
+    console.warn('on Sign In pressed ');
+    Navigation.navigate('Signin');
   };
 
   return (

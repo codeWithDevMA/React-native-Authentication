@@ -7,6 +7,7 @@ import ForgotPasswordScreen from '../screnns/ForgotPasswordScreen/ForgotPassword
 import NewPasswordScreen from '../screnns/NewPasswordScreen/NewPasswordScreen.js';
 import SigninScreen from '../screnns/SigninScreen/Signin_Screen.js';
 import {SignUpScreen} from '../screnns/SignUpScreen/index.js';
+import Home from '../screnns/HomeScreen/index.js';
 const Navigation = () => {
   const Stack = createNativeStackNavigator();
   return (
@@ -17,6 +18,8 @@ const Navigation = () => {
         <Stack.Screen name="ForgotPassword" component={ForgotPasswordScreen} />
         <Stack.Screen name="NewPassword" component={NewPasswordScreen} />
         <Stack.Screen name="SignUp" component={SignUpScreen} />
+
+        <Stack.Screen name="Home" component={Home} />
       </Stack.Navigator>
     </NavigationContainer>
   );
